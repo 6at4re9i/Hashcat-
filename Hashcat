@@ -1,0 +1,14 @@
+hashcat -m 0 -a 0 hahs.txt rockyou.txt // a simple example of attacking by dictionary 
+                                        // you can choose the hash protocol with -m, zero means that we choosed md5 protocol, if you need another, find it om hashcat -h
+                                        // -a 0 - attack mode with brute forcing of dictionary 
+                                        // hash.txt - file with hashed passwords
+                                        // rockyou.txt - one of the most popular dictionaries for brute forcing
+                                        //be carefull, my files is a local for programm, otherwise you need to specify derictory
+                                        
+                                        
+hashcat -m 0 -a 3 -i hash.txt ?d?l?u?s ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 //example of code, which will brute force all possible keybord symbols from 1 to 16 length
+                                                                          //you can add -w 1, 2, 3 or 4 to the end of the string, but be carefull
+                                                                          //this can put a lot of strain on your system
+                                                                          
+
+hashcat -m 0 -a 3 -i --increment-min==x --increment-max=y hash.txt ?d?l?u?s ?1?1?1?1 //you can add increment arguments to enter the brute force range
