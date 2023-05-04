@@ -1,4 +1,4 @@
-hashcat -m 0 -a 0 hahs.txt rockyou.txt // a simple example of attacking by dictionary 
+hashcat -m 0 -a 0 hahs.txt rockyou.txt  // a simple example of attacking by dictionary 
                                         // you can choose the hash protocol with -m, zero means that we choosed md5 protocol, if you need another, find it om hashcat -h
                                         // -a 0 - attack mode with brute forcing of dictionary 
                                         // hash.txt - file with hashed passwords
